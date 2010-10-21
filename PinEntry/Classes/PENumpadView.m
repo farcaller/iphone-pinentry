@@ -158,6 +158,15 @@ NSString *kPinEntryKeyboardCode = @"kPinEntryKeyboardCode";
 		case PEKeyboardDetailDone:
 			detail = @"-done";
 			break;
+		case PEKeyboardDetailNext:
+			detail = @"-next";
+			break;
+		case PEKeyboardDetailDot:
+			detail = @"-dot";
+			break;
+		case PEKeyboardDetailEdit:
+			detail = @"-edit";
+			break;
 	}
 	[self setNeedsDisplay];
 }

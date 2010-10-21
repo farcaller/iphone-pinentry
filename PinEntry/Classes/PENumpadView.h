@@ -46,6 +46,7 @@ extern NSString *kPinEntryKeyboardCode;
 #define PEKeyboardDetailDone	1
 #define PEKeyboardDetailNext	2
 #define PEKeyboardDetailDot		3
+#define PEKeyboardDetailEdit	4
 
 
 @interface PENumpadView : UIView

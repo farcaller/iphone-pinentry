@@ -18,8 +18,9 @@ Use the property **detailButton** to specify the look of the optional button.
 
 * _PEKeyboardDetailNone_: no button (no events generated on tap)
 * _PEKeyboardDetailDone_: "DONE" button
-* _PEKeyboardDetailNext_: (TBD) "NEXT" button
-* _PEKeyboardDetailDot_: (TBD) "." button
+* _PEKeyboardDetailNext_: "NEXT" button
+* _PEKeyboardDetailDot_: "." button
+* _PEKeyboardDetailEdit_: "EDIT" button
 
 ### Handling events
 
@@ -151,6 +152,5 @@ A complete implementation of navigation stack, required to ask user for a pin co
 TODO
 ====
 
-* Add support for _PEKeyboardDetailNext_ and _PEKeyboardDetailDot_
 * Add i18n support
 * Add retina images
