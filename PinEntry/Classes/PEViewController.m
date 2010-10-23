@@ -72,7 +72,7 @@
 		self.pin = [NSString stringWithFormat:@"%@%d", self.pin, num];
 		[self redrawPins];
 		if([self.pin length] == 4)
-			keyboard.detailButon = PEKeyboardDetailDone;
+			[delegate pinEntryControllerDidEnteredPin:self];
 	}
 }
 
