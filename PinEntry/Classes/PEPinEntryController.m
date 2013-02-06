@@ -99,7 +99,7 @@ static PEViewController *VerifyController()
 					PEViewController *c = NewController();
 					c.delegate = self;
 					pinStage = PS_ENTER1;
-					[self pushViewController:c animated:YES];
+					[[self navigationController] pushViewController:c animated:YES];
 					self.viewControllers = [NSArray arrayWithObject:c];
 					[c release];
 				}
@@ -109,7 +109,7 @@ static PEViewController *VerifyController()
 			pinEntry1 = [controller.pin intValue];
 			PEViewController *c = VerifyController();
 			c.delegate = self;
-			[self pushViewController:c animated:YES];
+			[[self navigationController] pushViewController:c animated:YES];
 			self.viewControllers = [NSArray arrayWithObject:c];
 			pinStage = PS_ENTER2;
 			[c autorelease];

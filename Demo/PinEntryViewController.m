@@ -22,21 +22,21 @@
 {
 	PEPinEntryController *c = [PEPinEntryController pinCreateController];
 	c.pinDelegate = self;
-	[self presentModalViewController:c animated:YES];
+	[self presentViewController:c animated:YES completion:0];
 }
 
 - (IBAction)changePin
 {
 	PEPinEntryController *c = [PEPinEntryController pinChangeController];
 	c.pinDelegate = self;
-	[self presentModalViewController:c animated:YES];
+	[self presentViewController:c animated:YES completion:0];
 }
 
 - (IBAction)verifyPin
 {
 	PEPinEntryController *c = [PEPinEntryController pinVerifyController];
 	c.pinDelegate = self;
-	[self presentModalViewController:c animated:YES];
+	[self presentViewController:c animated:YES completion:0];
 }
 
 - (BOOL)pinEntryController:(PEPinEntryController *)c shouldAcceptPin:(NSUInteger)pin
@@ -46,7 +46,7 @@
 		NSLog(@"Pin is valid!");
 		if(c.verifyOnly == YES) {
 			// Used for pinVerifyController, we should not hide pinChangeController yet
-			[self dismissModalViewControllerAnimated:YES];
+			[self dismissViewControllerAnimated:YES completion:0];
 		}
 		return YES;
 	} else {
@@ -60,13 +60,13 @@
 	// Update your info to new pin code
 	mypin = pin;
 	NSLog(@"New pin is set to %d", pin);
-	[self dismissModalViewControllerAnimated:YES];
+	[self dismissViewControllerAnimated:YES completion:0];
 }
 
 - (void)pinEntryControllerDidCancel:(PEPinEntryController *)c
 {
 	NSLog(@"Pin change cancelled!");
-	[self dismissModalViewControllerAnimated:YES];
+	[self dismissViewControllerAnimated:YES completion:0];
 }
 
 @end
