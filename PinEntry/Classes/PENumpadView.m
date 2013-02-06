@@ -122,7 +122,7 @@ NSString *kPinEntryKeyboardCode = @"kPinEntryKeyboardCode";
 		switch(activeClip) {
 			case 9:
 				activeClip = -1;
-				if(detail == @"") {
+				if([detail isEqualToString: @""]) {
 					[self touchesCancelled:touches withEvent:event];
 					return;
 				}
